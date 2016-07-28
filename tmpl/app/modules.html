@@ -1,0 +1,58 @@
+<div class="content">
+    <div class="clearfix">
+        <h2 id="download">项目地址</h2>
+    </div>
+    <div class="list">
+        <a href="https://github.com/thx/magix">https://github.com/thx/magix</a>
+    </div>
+</div>
+<div class="content">
+    <div class="clearfix">
+        <h2 id="modules">定制Magix</h2>
+    </div>
+    <h3>定制方法</h3>
+    <div class="list">
+        默认Magix只有最核心的区块管理功能，其它如router、接口管理等均不内置<br />
+        通过修改<a href="https://github.com/thx/magix/blob/master/tool/gulpfile.js#L19" target="_blank">tool/gulpfile.js</a>中的extModules和coreModules对象进行定制<br />
+        您也可以<span class="red">参考内置模块的方案添加您的模块，并使它成为可选模块</span>
+        <br /><br />
+        如果定制不同的加载器或类库，可以参考src目录下的amd、cmd或kissy目录里的magix文件，实现里面的方法即可。其中src/tmpl目录是与加载器和类库无关的公用文件，不需要修改。<br /><br />
+        可选模块可以查看<a href="https://github.com/thx/magix/blob/master/tool/gulpfile.js#L19" target="_blank">tool/gulpfile.js</a>文件中的extModules及注释<br /><br />
+        <a href="https://github.com/thx/magix/issues" target="_blank">其它问题请在这里填写您的issue</a>
+    </div>
+    <h3>定制后打包</h3>
+    <div class="list">
+        在tool目录下运行gulp combine,成功后生成dist/type/magix-debug.js。再运行gulp compress即可在同目录下生成相应的压缩文件magix.js。<br /><br />
+        <a href="https://github.com/thx/magix/issues" target="_blank">其它问题请在这里填写您的issue</a>
+    </div>
+</div>
+<div class="content">
+    <div class="clearfix">
+        <h2 id="vom">调试插件</h2>
+    </div>
+    <div class="list">
+        方式一：<br />
+        在页面中直接引用http://thx.github.io/magix/assets/helper.js <br /><br />
+        方式二：<br />
+        添加以下链接到书签<br />
+        <a href="javascript:void((function(d,s){s=d.createElement('script');s.src='http://thx.github.io/magix/assets/helper.js';s.charset='utf-8';d.body.appendChild(s)}(document)))">Magix Helper</a><br />
+        然后在使用Magix的页面上点击该书签即可<br /><br />
+        方式三：<br />
+        通过 npm install magix-inspector 安装后自己引用<br /><br />
+        <a href="https://github.com/thx/magix-inspector/issues" target="_blank">其它问题请在这里填写您的issue</a>
+    </div>
+</div>
+<div class="content">
+    <div class="clearfix">
+        <h2 id="explain">文档说明</h2>
+    </div>
+    <div class="list">
+    名称后带 p 标识的，如 pId<sup class="xmark">p</sup>，则表示 pId 是一个属性<br />
+    名称后带 x 标识的，如 each<sup class="xmark">x</sup>，则表示 each 是可选的，在详细说明里会告诉该可选项在有哪些模块时才存在<br />
+    名称后带 s 标识的，如 root<sup class="xmark">s</sup>，则表示 root 是一个静态方法，该标识只在宿主对象是函数时才会出现<br />
+    名称后带 i 标识的，如 off<sup class="xmark">i</sup>，则表示 off 是继承来的<br />
+    名称后带 e 标识的，如 add<sup class="xmark">e</sup>，则表示 add 是一个事件<br /><br />
+    以上标识可能会叠加存在某一个上，如 fire<sup class="xmark">i</sup><sup class="xmark">s</sup>是一个继承来的静态方法<br /><br />
+    名称后带具体名称的，如 keys<sup class="xmark" title="可选的模块">linkage|router</sup> 则当 linkage 或 router 模块启用时，该属性或方法才存在
+    </div>
+</div>

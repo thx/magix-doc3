@@ -1,0 +1,59 @@
+<div class="content">
+    <div class="clearfix">
+        <h2 id="<%=entity.id%>">
+            <%if(entity.isClass){%>
+            <a href="#!/index" mx-click="toggleMoreInfos()"><i class="tree plus"></i>
+            <%}%>
+            <%=entity.name%>
+            <%if(entity.isClass){%>
+            </a>
+            (<%=getParams(entity.params)%>)
+            <%}%>
+            <%if(entity.needModule){%><sup class="mark" title="需要编译模块"><%=entity.needModule%></sup><%}%>
+            <small style="margin-left:10px"><%=entity.desc%></small>
+        </h2>
+        <%=getInherits(entity.name)%>
+    </div>
+
+    <%if(entity.properties&&entity.properties.length){%>
+    <h3>属性</h3>
+    <%for(var i=0;i<entity.properties.length;i++){%>
+    <%var val=entity.properties[i]%>
+    <div class="list">
+        <i class="tree plus" style="background:none"></i>
+        <span class="item" id="<%=val.id%>"><%=val.name%></span>
+        <small style="margin-left:10px">&#123;<%=val.type%>&#125;</small>
+        <div class="desc"><%=val.desc%></div></div>
+    <%}%>
+    <%}%>
+
+
+    <%if(entity.methods&&entity.methods.length){%>
+    <h3>方法</h3>
+    <%for(var i=0;i<entity.methods.length;i++){%>
+    <%var val=entity.methods[i]%>
+    <div class="list">
+        <a href="#!/index" mx-click="toggleMoreInfos({id:'<%=val.id%>',type:'methods'})">
+            <i class="tree plus"></i>
+            <span class="item" id="<%=val.id%>"><%=val.name%>(<%=getParams(val.params)%>)</span>
+        </a>
+        <%if(val.memberOf!=entity.name){%><sup class="mark" title="继承来的">I</sup><%}%>
+        <%if(val.isStatic&&entity.isClass){%><sup class="mark" title="静态方法">S</sup><%}%>
+        <%if(val.needModule){%><sup class="mark" title="可选的模块"><%=val.needModule%></sup><%}%>
+        <div class="desc"><%=val.desc%></div>
+    </div>
+    <%}%>
+    <%}%>
+
+
+    <%if(entity.events&&entity.events.length){%>
+    <h3>事件</h3>
+    <%for(var i=0;i<entity.events.length;i++){%>
+    <%var val=entity.events[i]%>
+    <div class="list">
+        <a href="#!/index" mx-click="toggleMoreInfos({id:'<%=val.id%>',type:'events'})"><i class="tree plus"></i><span class="item" id="<%=val.id%>"><%=val.name%></span><%if(val.isStatic&&entity.isClass){%><sup class="mark" title="对象事件">S</sup><%}%></a>
+        <div class="desc"><%=val.desc%></div>
+    </div>
+    <%}%>
+    <%}%>
+</div>

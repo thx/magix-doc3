@@ -1,0 +1,255 @@
+html {
+	height: 100%;
+}
+h1 {
+	font-size: 18px;
+}
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	float: left;
+	*display: inline;
+}
+h2 small {
+	text-indent: 2em;
+}
+small {
+	font-size: 12px;
+	font-weight: normal;
+}
+h3 {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 32px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+h4 {
+	line-height: 28px;
+}
+.ihrt-outer {
+	float: right;
+	*display: inline;
+    border: 1px solid;
+    padding: 6px 10px;
+    margin-bottom: -20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.ihrt {
+	padding-left: 15px;
+}
+.ihrt-list {
+	background: url("http://gtms03.alicdn.com/tps/i3/TB15r65JXXXXXbIaXXXRbrVFXXX-16-18.gif") no-repeat -5px 0;
+	padding-left: 12px;
+	margin-top: 3px;
+}
+.list {
+	margin-top: 20px;
+}
+.list a {
+	text-decoration: none;
+}
+.item {
+	font-size: 14px;
+	font-weight: bold;
+}
+.desc {
+	text-indent: 2em;
+    margin-top:5px;
+}
+.mark {
+	margin-left: 5px;
+    padding: 0 3px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.callout {
+	margin-bottom: 15px;
+    padding: 20px;
+    border-left: 3px solid;
+}
+.example {
+    border: 1px solid;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 8px 20px;
+	margin-bottom: 15px;
+    word-break:break-all;
+}
+.tree {
+	background: url(http://img04.taobaocdn.com/tps/i4/T12oeGXjJkXXXXXXXX-32-80.png) no-repeat;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.plus {
+	background-position:0px -16px;
+}
+.minus{
+	background-position:-16px -16px;
+
+}
+#header {
+	line-height: 28px;
+	border-bottom: 1px solid;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1030;
+}
+#footer {
+	text-align: center;
+	padding: 15px 0 10px;
+	margin-top: 20px;
+	border-top: 1px solid #eee;
+}
+.toolbar {
+	height: 28px;
+	overflow: hidden;
+	padding: 4px 8px 2px;
+}
+.icon-home, .icon-menu {
+	float: left;
+	*display: inline;
+}
+.icon-home, .icon-home:hover {
+	padding: 0 6px;
+	text-decoration: none;
+}
+.icon-home .iconfont {
+	font-size: 22px;
+}
+.icon-menu {
+    border: 1px solid;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	*display: inline;
+    padding: 6px;
+}
+.icon-bar {
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+    margin-top: 4px;
+}
+.icon-bar:first-child {
+	margin-top: 0;
+}
+.form-search {
+	height: 28px;
+	overflow: hidden;
+	position: relative;
+}
+.form-search .search {
+	width:100%;
+	height:28px;
+	padding-left:8px;
+	color:#333;
+	font-size:14px;
+	border: none;
+	float: left;
+	*display: inline;
+}
+.form-search .delete {
+    position: absolute;
+    right: 34px;
+    text-align: center;
+    top: 0px;
+    color: #ddd;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+.form-search .btn-search {
+	color: #999;
+	border-left: 1px solid #ddd;
+    position: absolute;
+    right: 0;
+    top: 0;
+	text-align: center;
+    cursor: pointer;
+    width: 26px;
+	background: #eee;
+}
+
+.dir {
+	margin-left: 8%;
+}
+.menu-outer {
+	width: 40%;
+	float: left;
+	*display: inline;
+	margin-left: 10%;
+}
+.menu-t {
+	font-size: 18px;
+	margin-top: 10px;
+}
+.menu {
+	padding: 5px 0 10px 10px;
+	line-height: 28px;
+}
+.menu .menu-list {
+    list-style: circle inside none;
+	font-size: 14px;
+}
+
+.menu-extended {
+	border-top: 1px solid #101010;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.extended-inner {
+	border-top: 1px solid #101010;
+	border-bottom: 1px solid #101010;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin: 8px 0;
+}
+.content {
+	padding: 1% 5% 10% 5%;
+}
+
+.cb {
+  clear: both;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+}
+
+@keyframes twinkling{
+    0%{
+        background:#FF8400;
+    }
+    33%{
+        background:#fff;
+    }
+    66%{
+        background:#FF8400;
+    }
+    100%{
+        background:#fff;
+    }
+}
+.twinkling{
+    animation:twinkling 1.2s 1 ease-in-out;
+}
+.red{
+    color:#FF3030;
+}

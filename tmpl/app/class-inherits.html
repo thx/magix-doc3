@@ -1,0 +1,15 @@
+<div class="ihrt-outer">
+    继承关系：
+    <div class="ihrt">
+        <div class="ihrt-t">Object</div>
+        <%for(var i=0;i<list.length;i++){%>
+        <%var val=list[i]%>
+            <div class="ihrt-list">
+                <%=val.name%><%if(val.type){%>&lt;<%=val.type%>&gt;<%}%>
+        <%}%>
+        <%for(var i=0;i<list.length;i++){%>
+            </div>
+        <%}%>
+    </div>
+</div>
+<div class="cb"></div>

@@ -1,0 +1,33 @@
+<%var content=false%>
+<%if(info.params&&info.params.length){%>
+<%content=true%>
+<h4>参数：</h4>
+<div class="callout">
+    <%for(var i=0;i<info.params.length;i++){%>
+    <%var val=info.params[i]%>
+    <%=val.name%> &#123;<%=val.type%>&#125;
+    <%if(val.isOptional){%>[可选参数] <%}%>
+    <%if(val.desc){%><%=val.desc%><%}%>
+    <%if(i<info.params.length-1){%><br /><br /><%}%>
+    <%}%>
+</div>
+<%}%>
+
+<%if(info.returns){%>
+<%content=true%>
+<h4>返回值：</h4>
+<div class="callout">
+    <%=info.returns%>
+</div>
+<%}%>
+
+<%if(info.example){%>
+<%content=true%>
+<h4>示例：</h4>
+<div class="example">
+<%=formatExample(info.example)%>
+</div>
+<%}%>
+<%if(!content){%>
+无
+<%}%>

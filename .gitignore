@@ -1,0 +1,17 @@
+.tmp_*
+.project
+*.idea
+.DS_Store
+node_modules
+README.html
+
+# Jekyll generated result
+_site
+
+# Sublime Project files
+*.sublime-*
+tools/
+combos/edge
+dist/edge
+tools/edge
+src/edge

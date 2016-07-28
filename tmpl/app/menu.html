@@ -1,0 +1,28 @@
+<a href="#!/index" mx-click="to({to:'<%=data.id%>'})" class="toc_title">
+  <%=data.name%>
+<%if(data.isOptional){%><sup title="可选模块" class="xmark">x</sup><%}%>
+</a>
+<ul class="toc_section">
+    <%if(data.properties){%>
+    <%for(var i=0;i<data.properties.length;i++){%>
+    <%var one=data.properties[i]%>
+    <li>&ndash; <a href="#!/index" mx-click="to({to:'<%=one.id%>'})"><%=one.name%></a><sup title="属性" class="xmark">p</sup></li>
+    <%}%>
+    <%}%>
+
+
+    <%if(data.methods){%>
+    <%for(var i=0;i<data.methods.length;i++){%>
+    <%var one=data.methods[i]%>
+    <li>&ndash; <a href="#!/index" mx-click="to({to:'<%=one.id%>'})"><%=one.name%></a><%if(one.memberOf!=data.name||(data.inheritsMap&&data.inheritsMap[one.alias])){%><sup class="xmark" title="继承来的">i</sup><%}%><%if(one.isStatic&&data.isClass){%><sup title="静态方法" class="xmark">s</sup><%}%><%if(one.isOptional){%><sup title="可选模块" class="xmark">x</sup><%}%></li>
+    <%}%>
+    <%}%>
+
+
+    <%if(data.events){%>
+    <%for(var i=0;i<data.events.length;i++){%>
+    <%var one=data.events[i]%>
+    <li>&ndash; <a href="#!/index" mx-click="to({to:'<%=one.id%>'})"><%=one.name%></a><sup title="事件" class="xmark">e</sup><%if(one.memberOf!=data.name){%><sup title="继承来的" class="xmark">i</sup><%}%><%if(one.isStatic&&data.isClass){%><sup title="对象事件" class="xmark">s</sup><%}%></li>
+    <%}%>
+    <%}%>
+</ul>

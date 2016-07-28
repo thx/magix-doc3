@@ -1,0 +1,108 @@
+#header {
+	background: #222;
+	border-color: #080808;
+}
+a, h2, .item, .menu .menu-list {
+	color: #4499EE;
+}
+h1, .icon-home, .icon-home:hover, .icon-menu, .mark {
+	color: #fff;
+}
+.callout {
+	border-color: #4499EE;
+    background: #F0F7FE;
+}
+h3, .menu-t {
+	color: #404040;
+}
+.ihrt-outer, .example {
+	background-color: #Fafafa;
+	border-color: #E6E8EB;
+}
+.menu-extended .menu-t {
+	color: #E6E8EB;
+}
+#footer, small {
+	color: #BFC0C2;
+}
+#footer .belong {
+	color: #8EC2F5;
+}
+.icon-home:hover, .icon-menu:hover {
+	background-color: #333333;
+}
+.icon-menu {
+	border-color: #333;
+}
+.icon-bar {
+    background-color: #FFF;
+}
+.menu-extended .menu-list, .menu-extended .menu-list a {
+	color: #BEC0C2;
+}
+.mark {
+	background: #FF8400;
+}
+
+
+div#sidebar {
+  background: #fff;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px 0 30px 30px;
+  border-right: 1px solid #bbb;
+  box-shadow: 0 0 20px #ccc; -webkit-box-shadow: 0 0 20px #ccc; -moz-box-shadow: 0 0 20px #ccc;
+}
+a.toc_title, a.toc_title:visited {
+      display: block;
+      color: #4499ee;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    a.toc_title:hover {
+        text-decoration: underline;
+      }
+      ul.toc_section {
+      font-size: 11px;
+      line-height: 14px;
+      margin: 5px 0 0 0;
+      padding-left: 0px;
+      list-style-type: none;
+      font-family: Lucida Grande;
+    }
+      .toc_section li {
+        cursor: pointer;
+        margin: 0 0 3px 0;
+      }
+        .toc_section li a {
+          text-decoration: none;
+          color: #4499ee;
+        }
+          .toc_section li a:hover {
+            text-decoration: underline;
+          }
+div.container {
+  max-width: 750px;
+  margin: 60px 0 50px 260px;
+}
+.xmark{padding:1px 2px;}
+sup{cursor: default;}
+hr{
+  height: 1px;
+  border: 0;
+  padding: 0;
+  margin: 15px 0 0 0;
+  background: rgba(0,0,0,0.20);
+  background: -moz-linear-gradient(left center, rgba(165, 69, 243, 0.0) rgba(125, 118, 132, 0.33) 50%, rgba(165, 69, 243, 0.0));
+  background: -webkit-gradient(linear, left top, right top, from(rgba(165, 69, 243, 0.0)), color-stop(0.5, rgba(125, 118, 132, 0.33)), to(rgba(165, 69, 243, 0.0)));
+}
+.item .desc{
+  font-size:12px;
+  font-weight: normal;
+  color: #999;
+  margin-left: 15px;
+}
