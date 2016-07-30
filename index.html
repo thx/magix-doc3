@@ -14,16 +14,22 @@
     <link rel="stylesheet" type="text/css" href="src/assets/blue.css" />
 </head>
 <body>
-    <script type="text/javascript" src="src/sea.js"></script>
-    <script type="text/javascript" src="src/zepto.js"></script>
-    <script type="text/javascript" src="src/tmpl.js"></script>
-    <script type="text/javascript" src="src/magix.js"></script>
-    <script type="text/javascript" src="src/exts.js"></script>
-    <script type="text/javascript" src="src/data.js"></script>
-    <script type="text/javascript" src="src/app/default.js"></script>
-    <script type="text/javascript" src="src/app/menu.js"></script>
-    <script type="text/javascript" src="src/app/class.js"></script>
-    <script type="text/javascript" src="src/app/modules.js"></script>
-    <script type="text/javascript" src="src/boot.js"></script>
+    <script src="src/sea.js"></script>
+    <script src="src/zepto.js"></script>
+    <script src="src/tmpl.js"></script>
+    <script src="src/magix.js"></script>
+    <script src="src/exts.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/app/default.js"></script>
+    <script src="src/app/menu.js"></script>
+    <script src="src/app/class.js"></script>
+    <script src="src/app/modules.js"></script>
+    <script>
+        var Magix=require('magix');
+        Magix.boot({
+            defaultView:'app/default',
+            exts:['exts']
+        });
+    </script>
 </body>
 </html>
