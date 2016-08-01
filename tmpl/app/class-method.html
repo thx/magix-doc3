@@ -24,9 +24,9 @@
 <%if(info.example){%>
 <%content=true%>
 <h4>示例：</h4>
-<div class="example">
-<%=formatExample(info.example)%>
-</div>
+<pre class="example">
+<%=info.example%>
+</pre>
 <%}%>
 <%if(!content){%>
 无

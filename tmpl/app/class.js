@@ -119,16 +119,20 @@ module.exports = Magix.View.extend({
             }
         }
         var html = me.toHTML(me.methodTmpl, {
-            info: info,
-            formatExample: function(example) {
-                console.log();
-                return example.replace(/ /g, '&nbsp;').replace(/\b(?:function|var|if|else|this|return|true|false|null)\b/g, '<span style="color:blue">$&</span>').replace(/(^|[^:])(\/{2}[\s\S]*?)(?:[\r\n]|$)/mg, '$1<span style="color:green">$2</span><br />').replace(/\r\n|\r|\n/g, '<br />').replace(/(?:<br\s+\/>)+/gi, '<br />');
-            }
+            info: info //,
+                // formatExample: function(example) {
+                //     console.log();
+                //     return example.replace(/ /g, '&nbsp;').replace(/\b(?:function|var|if|else|this|return|true|false|null)\b/g, '<span style="color:blue">$&</span>').replace(/(^|[^:])(\/{2}[\s\S]*?)(?:[\r\n]|$)/mg, '$1<span style="color:green">$2</span><br />').replace(/\r\n|\r|\n/g, '<br />').replace(/(?:<br\s+\/>)+/gi, '<br />');
+                // }
         });
         var top = icon.offset().top;
         if (top < Zepto(window).scrollTop()) {
             Zepto(window).scrollTop(top - 50);
         }
         cnt.html(html);
+        var example = Zepto('#' + me.id + ' .example');
+        example.each(function(i,b){
+            hljs.highlightBlock(b);
+        });
     }
 });

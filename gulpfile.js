@@ -12,7 +12,8 @@ var excludeTmplFolders = [
     'tmpl/sea.js',
     'tmpl/zepto.js',
     'tmpl/tmpl.js',
-    'tmpl/data.js'
+    'tmpl/data.js',
+    'tmpl/highlight.pack.js'
 ];
 var onlyAllows = {
     '.html': 1,
