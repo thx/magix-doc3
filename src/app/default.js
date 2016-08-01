@@ -1,4 +1,4 @@
-define("app/default",['magix','data','zepto'],function(require){
+define('app/default',['magix','data','zepto'],function(require,exports,module){
 /*Magix ,Data ,Zepto */
 /*
     author:xinglie.lkf@taobao.com
@@ -6,8 +6,8 @@ define("app/default",['magix','data','zepto'],function(require){
 var Magix = require('magix');
 var Data = require('data');
 var Zepto = require('zepto');
-return Magix.View.extend({
-    tmpl: "<div id=\"sidebar\">\n    Magix<span style=\"font-size:10px\">(3.x)</span>\n    <ul class=\"toc_section\">\n        <li><a href=\"#!/index\" mx-click=\"to({to:'download'})\">项目地址</a></li>\n        <li><a href=\"#!/index\" mx-click=\"to({to:'modules'})\">定制Magix</a></li>\n        <li><a href=\"https://github.com/thx/magix-project\" target=\"_blank\">示例项目</a></li>\n        <li><a href=\"https://github.com/thx/magix-combine\" target=\"_blank\">编译工具</a></li>\n        <li><a href=\"#!/index\" mx-click=\"to({to:'vom'})\">调试插件</a></li>\n        <li><a href=\"#!/index\" mx-click=\"to({to:'explain'})\">文档说明</a></li>\n    </ul>\n    <hr>\n    <%for(var i=0;i<list.length;i++){%>\n    <%var o=list[i]%>\n    <div mx-vframe=\"true\" mx-view=\"app/menu?name=<%=o.name%>\"></div>\n    <%}%>\n</div>\n<div class=\"container\" id=\"container\">\n    <div mx-vframe=\"true\" mx-view=\"app/modules\"></div>\n    <%for(var i=0;i<list.length;i++){%>\n    <%var o=list[i]%>\n    <div mx-vframe=\"true\" mx-view=\"app/class?name=<%=o.name%>\"></div>\n    <%}%>\n</div>",
+module.exports = Magix.View.extend({
+    tmpl: "<div id=\"sidebar\">Magix<span style=\"font-size:10px\">(3.x)</span><ul class=\"toc_section\"><li><a href=\"#!/index\" mx-click=\"to({to:'download'})\">项目地址</a></li><li><a href=\"#!/index\" mx-click=\"to({to:'modules'})\">定制Magix</a></li><li><a href=\"https://github.com/thx/magix-project\" target=\"_blank\">示例项目</a></li><li><a href=\"https://github.com/thx/magix-combine\" target=\"_blank\">编译工具</a></li><li><a href=\"#!/index\" mx-click=\"to({to:'vom'})\">调试插件</a></li><li><a href=\"#!/index\" mx-click=\"to({to:'explain'})\">文档说明</a></li></ul><hr/> <%for(var i=0;i<list.length;i++){%> <%var o=list[i]%> <div mx-vframe=\"true\" mx-view=\"app/menu?name=<%=o.name%>\"></div> <%}%> </div><div class=\"container\" id=\"container\"><div mx-vframe=\"true\" mx-view=\"app/modules\"></div> <%for(var i=0;i<list.length;i++){%> <%var o=list[i]%> <div mx-vframe=\"true\" mx-view=\"app/class?name=<%=o.name%>\"></div> <%}%> </div>",
     adjust: function() {
         var width = Zepto(window).width();
         if (width < 1020) {

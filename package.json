@@ -1,14 +1,14 @@
 {
-    "name": "magix-doc",
-    "description": "magix doc",
-    "version": "1.0.0",
-    "author": "xinglie <xinglie.lkf@taobao.com>",
-    "dependencies": {
-        "gulp": "",
-        "gulp-watch": "",
-        "gulp-uglify": "",
-        "gulp-cssnano": "",
-        "del": "",
-        "magix-combine": ""
-    }
+  "name": "magix-doc",
+  "description": "magix doc",
+  "version": "1.0.0",
+  "author": "xinglie <xinglie.lkf@taobao.com>",
+  "dependencies": {
+    "del": "",
+    "gulp": "",
+    "gulp-cssnano": "",
+    "gulp-uglify": "",
+    "gulp-watch": "",
+    "magix-combine": "^1.1.6"
+  }
 }

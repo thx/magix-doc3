@@ -1,6 +1,3 @@
-var wrapTMPL = 'define("${moduleId}",[${requires}],function(require){\r\n/*${vars}*/\r\n${content}\r\n});';
-var wrapNoDepsTMPL = 'define("${moduleId}",function(){\r\n${content}\r\n});';
-var wrapNoExports = 'seajs.use([${requires}],function(${vars}){${content}});';
 
 var tmplFolder = 'tmpl'; //template folder
 var srcFolder = 'src'; //source folder
@@ -32,16 +29,7 @@ combineTool.config({
     srcFolder: srcFolder,
     buildFolder: buildFolder,
     excludeTmplFolders: excludeTmplFolders,
-    onlyAllows: onlyAllows,
-    generateJSFile: function(o) {
-        var tmpl = wrapNoExports;
-        tmpl = o.requires.length ? wrapTMPL : wrapNoDepsTMPL;
-        for (var p in o) {
-            var reg = new RegExp('\\$\\{' + p + '\\}', 'g');
-            tmpl = tmpl.replace(reg, (o[p] + '').replace(/\$/g, '$$$$'));
-        }
-        return tmpl;
-    }
+    onlyAllows: onlyAllows
 });
 
 gulp.task('cleanSrc', function() {

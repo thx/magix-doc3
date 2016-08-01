@@ -1,4 +1,4 @@
-define("exts",['magix','zepto'],function(require){
+define('exts',['magix','zepto'],function(require,exports,module){
 /*Magix ,Zepto */
 /*
     author:xinglie.lkf@taobao.com
