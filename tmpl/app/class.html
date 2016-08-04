@@ -39,7 +39,7 @@
         </a>
         <%if(val.memberOf!=entity.name){%><sup class="mark" title="继承来的">I</sup><%}%>
         <%if(val.isStatic&&entity.isClass){%><sup class="mark" title="静态方法">S</sup><%}%>
-        <%if(val.needModule){%><sup class="mark" title="可选的模块"><%=val.needModule%></sup><%}%>
+        <%if(val.needModule){%><sup class="mark" title="需要模块<%=val.needModule%>"><%=val.needModule%></sup><%}%>
         <div class="desc"><%=val.desc%></div>
     </div>
     <%}%>

@@ -6,7 +6,7 @@
     <%for(var i=0;i<info.params.length;i++){%>
     <%var val=info.params[i]%>
     <%=val.name%> &#123;<%=val.type%>&#125;
-    <%if(val.isOptional){%>[可选参数] <%}%>
+    <%if(val.isOptional){%>[可选] <%}%>
     <%if(val.desc){%><%=val.desc%><%}%>
     <%if(i<info.params.length-1){%><br /><br /><%}%>
     <%}%>

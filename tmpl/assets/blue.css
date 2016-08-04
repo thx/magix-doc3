@@ -9,14 +9,14 @@ h1, .icon-home, .icon-home:hover, .icon-menu, .mark {
 	color: #fff;
 }
 .callout {
-	border-color: #4499EE;
-    background: #F0F7FE;
+	border-color: #e6e8eb;
+    background: #f8f8f8;
 }
 h3, .menu-t {
 	color: #404040;
 }
 .ihrt-outer, .example {
-	background-color: #Fafafa;
+	background-color: #f8f8f8;
 	border-color: #E6E8EB;
 }
 .menu-extended .menu-t {

@@ -73,13 +73,9 @@ h4 {
     border-left: 3px solid;
 }
 .example {
-    border: 1px solid;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
     padding: 8px 20px;
 	margin-bottom: 15px;
-    word-break:break-all;
+    border-left:3px solid;
 }
 .tree {
 	background: url(//img04.taobaocdn.com/tps/i4/T12oeGXjJkXXXXXXXX-32-80.png) no-repeat;
