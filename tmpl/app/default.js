@@ -52,7 +52,7 @@ module.exports = Magix.View.extend({
     render: function() {
         var me = this;
         var list = [];
-        var keys = ['Magix', 'Cache', 'Event', 'Vframe', 'Tmpl', 'Updater', 'View', 'Base', 'Router', 'Service', 'Bag'];
+        var keys = ['Magix', 'Cache', 'Event', 'Router', 'Vframe', 'Tmpl', 'Updater', 'View', 'Service', 'Bag', 'Base'];
         for (var i = 0; i < keys.length; i++) {
             var key = keys[i];
             if (Data[key]) list.push(Data[key]);
@@ -67,13 +67,14 @@ module.exports = Magix.View.extend({
         var node = Zepto('#' + id);
         if (node) {
             Zepto(window).scrollTop(node.offset().top - 50);
-            console.log(node, node.parent());
             var cnt = node.parents('.list');
             cnt.addClass('twinkling');
-            console.log(cnt, cnt.hasClass('twinkling'));
             setTimeout(function() {
                 cnt.removeClass('twinkling');
             }, 1200);
         }
+    },
+    'to<click>': function(e) {
+        this.highlight(e.params.to);
     }
 });
