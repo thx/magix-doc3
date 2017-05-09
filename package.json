@@ -9,6 +9,6 @@
     "gulp-cssnano": "",
     "gulp-uglify": "",
     "gulp-watch": "",
-    "magix-combine": "^1.1.6"
+    "magix-combine": "1.1.6"
   }
 }
